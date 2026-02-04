@@ -137,12 +137,13 @@ p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  inline-size: 100%;
+  inline-size: 322px;
 }
 
 .login-group {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: start;
   align-items: center;
 }
 

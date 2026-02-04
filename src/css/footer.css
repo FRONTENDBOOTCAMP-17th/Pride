@@ -203,6 +203,9 @@
           content: "";
         }
       }
+      @media (width >= 1136px) {
+        max-inline-size: 700px;
+      }
     }
     .footer-policy {
       font-size: 12px;

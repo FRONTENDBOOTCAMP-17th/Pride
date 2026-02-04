@@ -47,6 +47,7 @@
 
 .qna {
   padding: var(--spacing-40) var(--spacing-24);
+  line-height: 150%;
 
   .qna-question {
     margin-block-end: var(--spacing-36);
@@ -59,22 +60,41 @@
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-1 {
-      font-weight: 700;
-      inline-size: 352px;
-      block-size: 24px;
-      margin-inline-end: 36px;
-    }
+    .qna-pay {
+      summary {
+        list-style: none;
+      }
 
-    .qna-button-1 {
-      block-size: var(--spacing-16);
-      inline-size: var(--spacing-16);
-      margin-block-start: 19px;
-      background: black;
-      mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-      appearance: none;
-      border: 0;
-      padding: 0;
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .qna-2 {
+          font-weight: 700;
+          inline-size: 90%;
+          block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          block-size: var(--spacing-16);
+          inline-size: var(--spacing-16);
+          margin-block-start: var(--spacing-4);
+          background: black;
+          mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
+          flex-shrink: 0;
+        }
+
+        &[open] .qna-button-2 {
+          mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%);
+        }
+      }
     }
   }
 
@@ -82,42 +102,68 @@
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-between;
-    padding: var(--spacing-16) var(--spacing-20);
 
     .qna-pay {
-      display: flex;
-      flex-flow: nowrap row;
-      justify-content: space-between;
+      summary {
+        list-style: none;
+      }
 
-      .qna-2 {
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: space-between;
+        padding: var(--spacing-16) var(--spacing-20);
+        cursor: pointer;
+
+        .qna-2 {
+          font-weight: 700;
+          inline-size: 90%;
+          block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-2 {
+          block-size: var(--spacing-16);
+          inline-size: var(--spacing-16);
+          margin-block-start: 4px;
+          background: black;
+          mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
+          flex-shrink: 0;
+        }
+
+        &[open] .qna-button-2 {
+          mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%);
+        }
+      }
+    }
+
+    .qna-pay-2 {
+      padding: 24px;
+      inline-size: 100%;
+
+      .qna-3 {
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-card {
+        line-height: 160%;
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-4 {
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-5 {
+        /* background: red; */
+        padding: var(--spacing-12);
+        border-bottom: 3px solid rgba(189, 189, 189, 0.7);
         font-weight: 700;
-        inline-size: 90%;
-        block-size: 24px;
-        margin-inline-end: 36px;
       }
-
-      .qna-button-2 {
-        block-size: var(--spacing-16);
-        inline-size: var(--spacing-16);
-        margin-block-start: 19px;
-        background: black;
-        mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-        appearance: none;
-        border: 0;
-        padding: 0;
-      }
-    }
-
-    .qna-3 {
-    }
-
-    .qna-card {
-    }
-
-    .qna-4 {
-    }
-
-    .qna-5 {
     }
   }
 
@@ -128,7 +174,7 @@
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-3 {
+    .qna-6 {
       font-weight: 700;
       inline-size: 352px;
       block-size: 24px;
@@ -154,9 +200,9 @@
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-4 {
+    .qna-7 {
       font-weight: 700;
-      inline-size: 352px;
+      inline-size: 100%;
       block-size: 24px;
       margin-inline-end: 36px;
     }
@@ -180,7 +226,7 @@
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-5 {
+    .qna-8 {
       font-weight: 700;
       inline-size: 352px;
       block-size: 24px;

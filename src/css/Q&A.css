@@ -51,7 +51,9 @@
   font-family: Pretendard;
   display: flex;
   flex-flow: nowrap column;
-  margin-inline: 100px;
+  p {
+    font-size: 16px;
+  }
 
   @media (width >= 786px) {
     padding: var(--spacing-56) var(--spacing-32);

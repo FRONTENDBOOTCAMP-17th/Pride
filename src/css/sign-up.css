@@ -1,3 +1,4 @@
+/* --- 기본 유틸리티 및 변수 (기존 코드 유지) --- */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -11,38 +12,23 @@
 }
 
 :root {
-  /* download 전용(필요 최소) */
   --download-max-width: 1200px;
-
-  /* font */
   font-family: Pretendard, sans-serif;
-
-  /* Foundation Semantic*/
-  --color-primary: var(--color-black, #000);
-  --color-secondary: var(--color-white, #fff);
-  --color-tertiary: var(--color-gray-100, #f5f5f5);
-
-  --color-accent: var(--color-blue-500, #276ef1);
-
-  --color-negative: var(--color-red-500, #e11900);
-  --color-warning: var(--color-yellow-500, #ffc043);
-  --color-positive: var(--color-green-500, #048848);
-
-  /*  Content Colors */
-  --content-contentSecondary: var(--color-black, #000);
-
-  --content-primary: var(--color-gray-500, #6b6b6b);
-  --content-tertiary: var(--color-gray-300, #a6a6a6); /* Border Colors*/
-
-  --border-opaque: var(--color-gray-400, #898989);
-  --border-transparent: rgba(189, 189, 189, 0.3); /* gray.400 / 30% */
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-tertiary: #f5f5f5;
+  --color-accent: #276ef1;
+  --color-negative: #e11900;
+  --color-warning: #ffc043;
+  --color-positive: #048848;
+  --content-contentSecondary: #000;
+  --content-primary: #6b6b6b;
+  --content-tertiary: #a6a6a6;
+  --border-opaque: #898989;
+  --border-transparent: rgba(189, 189, 189, 0.3);
   --border-transparent2: rgba(137, 137, 137, 0.3);
-
-  /*Status Transparent*/
   --positive-transparent: rgba(4, 136, 72, 0.1);
   --negative-transparent: rgba(225, 25, 0, 0.1);
-
-  /* Spacing */
   --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
@@ -61,33 +47,37 @@
   --spacing-64: 64px;
 }
 
+/* --- 레이아웃 (기존 코드 유지) --- */
 section {
   padding-block: var(--spacing-40);
   padding-inline: var(--spacing-24);
+}
 
-  @media (width >= 600px) {
+@media (width >= 600px) {
+  section {
     padding-block: var(--spacing-56);
     padding-inline: var(--spacing-32);
   }
+}
 
-  @media (width >= 1136px) {
+@media (width >= 1136px) {
+  section {
     padding-block: var(--spacing-64);
     padding-inline: var(--spacing-64);
     display: flex;
     flex-flow: row nowrap;
-
-    h2 {
-      font-size: 50.517px;
-      font-weight: 700;
-      line-height: 140%;
-      flex: 1;
-      align-items: center;
-      align-self: center;
-    }
-
-    .signup-content {
-      flex: 1;
-    }
+    align-items: flex-start;
+  }
+  section h2 {
+    font-size: 50.517px;
+    font-weight: 700;
+    line-height: 140%;
+    flex: 1;
+    align-self: flex-start;
+    margin-block-start: 318.743px;
+  }
+  .signup-content {
+    flex: 1;
   }
 }
 
@@ -97,8 +87,10 @@ h2 {
   font-weight: 700;
   margin-block-start: 0px;
   line-height: 140%;
+}
 
-  @media (width >= 600px) {
+@media (width >= 600px) {
+  h2 {
     font-size: 37.897px;
   }
 }
@@ -109,29 +101,29 @@ div.signup-subtitle {
   align-items: center;
   justify-content: space-between;
   margin-block-end: calc(var(--spacing-36) - 21.326px);
+}
 
-  p {
-    color: var(--color-primary);
-    font-size: 21.328px;
-    font-weight: 600;
-    line-height: 150%;
-  }
+div.signup-subtitle p {
+  color: var(--color-primary);
+  font-size: 21.328px;
+  font-weight: 600;
+  line-height: 150%;
+}
 
-  button {
-    background: transparent;
-    block-size: 100%;
-    font-size: var(--spacing-16);
-    font-weight: 600;
-    line-height: 150%;
-    border: none;
-    padding: var(--spacing-4);
-    border-bottom: 1px solid var(--content-tertiary);
+div.signup-subtitle button {
+  background: transparent;
+  block-size: 100%;
+  font-size: var(--spacing-16);
+  font-weight: 600;
+  line-height: 150%;
+  border: none;
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--content-tertiary);
+}
 
-    a {
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-  }
+div.signup-subtitle button a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 ul {
@@ -141,53 +133,49 @@ ul {
   padding: 0;
   margin: 0;
   gap: var(--spacing-16);
-
-  .signup-name {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: var(--spacing-16);
-  }
-
-  input {
-    background: var(--color-tertiary);
-    border: 1px solid var(--border-transparent2);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 160%;
-    inline-size: 100%;
-    height: 50px;
-    box-sizing: border-box;
-    padding-inline: var(--spacing-12);
-
-    &.signup-email {
-      &:focus {
-        background: var(--positive-transparent);
-        outline: none;
-        border: 2px solid var(--color-positive);
-      }
-    }
-
-    &.signup-pwd {
-      &:focus {
-        background: var(--negative-transparent);
-        outline: none;
-        border: 2px solid var(--color-negative);
-      }
-    }
-  }
 }
 
-div {
-  .error-message {
-    display: none;
-    margin: 0;
-    color: var(--color-negative);
-    font-size: 12.003px;
-  }
+ul .signup-name {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--spacing-16);
+}
 
-  input:user-invalid + .error-message {
-    display: block;
-  }
+ul input {
+  background: var(--color-tertiary);
+  border: 1px solid var(--border-transparent2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  inline-size: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding-inline: var(--spacing-12);
+}
+
+input.signup-email:focus:not(:placeholder-shown),
+input.signup-email:valid:not(:placeholder-shown) {
+  background: var(--positive-transparent);
+  border: 2px solid var(--color-positive);
+  outline: none;
+}
+
+input.signup-pwd:focus:not(:placeholder-shown),
+input.signup-pwd:invalid:not(:placeholder-shown) {
+  background: var(--negative-transparent);
+  border: 2px solid var(--color-negative);
+  outline: none;
+}
+
+div .error-message {
+  display: none;
+  margin: 0;
+  color: var(--color-negative);
+  font-size: 12.003px;
+}
+
+input.signup-pwd:invalid:not(:placeholder-shown) + .error-message {
+  display: block;
 }
 
 p {
@@ -204,48 +192,49 @@ p {
   block-size: var(--spacing-56);
   align-items: center;
   gap: var(--spacing-36);
+}
 
-  a {
-    text-decoration: none;
-  }
+.signup-submit a {
+  text-decoration: none;
+}
+.signup-submit .sign a {
+  color: var(--color-secondary);
+}
+.signup-submit .login a {
+  color: var(--color-primary);
+}
 
-  .sign a {
-    color: var(--color-secondary);
-  }
+.signup-submit .sign {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: var(--spacing-16) var(--spacing-24);
+  block-size: 100%;
+  border: none;
+  cursor: pointer;
+}
 
-  .login a {
-    color: var(--color-primary);
-  }
+.signup-submit .signup-login {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: var(--spacing-16);
+}
 
-  .sign {
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 150%;
-    padding: var(--spacing-16) var(--spacing-24);
-    block-size: 100%;
-  }
+.signup-submit .signup-login .login-text {
+  font-size: 12.003px;
+  font-weight: 400;
+  line-height: 160%;
+}
 
-  .signup-login {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: var(--spacing-16);
-
-    .login-text {
-      font-size: 12.003px;
-      font-weight: 400;
-      line-height: 160%;
-    }
-
-    .login {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 150%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--content-tertiary);
-    }
-  }
+.signup-submit .signup-login .login {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--content-tertiary);
+  cursor: pointer;
 }

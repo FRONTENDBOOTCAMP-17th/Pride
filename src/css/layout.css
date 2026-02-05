@@ -1,7 +1,3 @@
-/* =========================================================
-   Layout Grid System
-   ========================================================= */
-
 /* 공통 컨테이너 */
 body {
   width: 100%;
@@ -21,7 +17,12 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
-    .signup-container {
+    .signup-container,
+    .footer,
+    main,
+    section,
+    .qna,
+    header {
       grid-column: span 4;
     }
   }
@@ -40,7 +41,12 @@ body {
     row-gap: 36px;
   }
 
-  .signup-container {
+  .signup-container,
+  .footer,
+  main,
+  section,
+  .qna,
+  header {
     grid-column: span 8;
   }
 }
@@ -59,6 +65,16 @@ body {
   }
 
   .signup-container {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 36px;
+    row-gap: 36px;
+  }
+
+  .footer,
+  main,
+  section,
+  .qna,
+  header {
     grid-column: span 12;
   }
 }

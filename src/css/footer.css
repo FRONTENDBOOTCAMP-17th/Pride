@@ -1,8 +1,8 @@
-:root {
+root {
   /* color */
   --color-white: #fff;
 
-  /* Foundation Semantic*/
+  /* Foundation Semantic */
   --color-primary: var(--color-black);
   --color-secondary: var(--color-white);
   --color-tertiary: var(--color-gray-100);
@@ -13,7 +13,7 @@
   --color-warning: var(--color-yellow-500);
   --color-positive: var(--color-green-500);
 
-  /*  Content Colors */
+  /* Content Colors */
   --content-primary: var(--color-black);
   --content-secondary: var(--color-gray-500);
   --content-tertiary: var(--color-gray-300);
@@ -21,15 +21,14 @@
   --content-inverse-primary: var(--color-white);
   --content-inverse-secondary: var(--color-gray-300);
 
-  /* Border Colors*/
+  /* Border Colors */
   --border-opaque: var(--color-gray-400);
-  --border-transparent: rgba(189, 189, 189, 0.3); /* gray.400 / 30% */
-
-  /*Status Transparent*/
+  --border-transparent: rgba(189, 189, 189, 0.3);
+  /* Status Transparent */
   --positive-transparent: rgba(10, 138, 67, 0.1);
   --negative-transparent: rgba(225, 25, 0, 0.1);
 
-  /* Spacing */
+  /* Spacing  */
   --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
@@ -49,7 +48,6 @@
 }
 
 .footer {
-  /* 폰트 스타일 */
   font-family: 'Pretendard Variable';
 
   display: flex;
@@ -70,9 +68,15 @@
     }
   }
 
+  h2 {
+    color: white;
+    font-size: 21.33px;
+  }
+
   .footer-header {
     display: flex;
     flex-flow: nowrap column;
+    margin-block-end: var(--spacing-64);
 
     gap: 28px;
     .footer-icon {
@@ -85,6 +89,8 @@
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-between;
+
+    margin-block-end: var(--spacing-64);
 
     text-decoration: none;
     color: var(--color-secondary);
@@ -101,7 +107,7 @@
       h2 {
         margin-block: var(--spacing-20);
       }
-      li{
+      li {
         list-style: none;
       }
     }
@@ -114,6 +120,7 @@
   .footer-section2 {
     display: flex;
     flex-flow: nowrap column;
+    margin-block-end: var(--spacing-64);
 
     gap: var(--spacing-36);
     .footer-snsIcon {
@@ -180,27 +187,28 @@
       align-items: center;
       gap: var(--spacing-36);
       p {
-        font-style:normal;
+        font-style: normal;
         color: #a6a6a6;
       }
       .footer-corp-content1 {
         white-space: nowrap;
       }
-      .footer-corp-content2{
+      .footer-corp-content2 {
         color: #a6a6a6;
 
-        dt, dd{
+        dt,
+        dd {
           display: inline;
           margin: 0;
         }
-        & dt::after{
-          content: ": ";
+        & dt::after {
+          content: ': ';
         }
-        & dd::after{
-          content: " | ";
+        & dd::after {
+          content: ' | ';
         }
-        & dd:last-child::after{
-          content: "";
+        & dd:last-child::after {
+          content: '';
         }
       }
       @media (width >= 1136px) {
@@ -230,7 +238,3 @@
     padding: var(--spacing-64);
   }
 }
-
-/* mobile(~ 599px) */
-/* tablet(600 ~ 1135) */
-/* desktop(1136 ~ ) */

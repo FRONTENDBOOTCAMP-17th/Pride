@@ -17,6 +17,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
+    .download-section,
     .signup-container,
     .footer,
     main,
@@ -41,6 +42,7 @@ body {
     row-gap: 36px;
   }
 
+  .download-section,
   .signup-container,
   .footer,
   main,
@@ -64,6 +66,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
   }
 
+  .download-section,
   .signup-container {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 36px;

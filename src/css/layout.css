@@ -17,7 +17,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
-
+    .signup-container,
     .footer,
     main,
     section,
@@ -41,6 +41,7 @@ body {
     row-gap: 36px;
   }
 
+  .signup-container,
   .footer,
   main,
   section,
@@ -58,6 +59,12 @@ body {
    ========================================================= */
 @media (min-width: 1136px) {
   body {
+    column-gap: 36px;
+    row-gap: 36px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .signup-container {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 36px;
     row-gap: 36px;

@@ -47,155 +47,408 @@
 
 .qna {
   padding: var(--spacing-40) var(--spacing-24);
+  line-height: 150%;
+  font-family: Pretendard;
+  display: flex;
+  flex-flow: nowrap column;
+  margin-inline: 100px;
+
+  @media (width >= 786px) {
+    padding: var(--spacing-56) var(--spacing-32);
+  }
+
+  @media (width >= 1152px) {
+    padding: var(--spacing-64) var(--spacing-64);
+  }
 
   .qna-question {
-    margin-block-end: var(--spacing-36);
+    font-size: 21.328px;
+    margin-block: 0px var(--spacing-36);
+
+    @media (width >= 786px) {
+      font-size: 28.4304px;
+    }
   }
 
   .qna-question-1 {
+    font-size: var(--spacing-16);
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-between;
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-1 {
-      font-weight: 700;
-      inline-size: 352px;
-      block-size: 24px;
-      margin-inline-end: 36px;
-    }
+    .qna-pay {
+      inline-size: 100%;
 
-    .qna-button-1 {
-      block-size: var(--spacing-16);
-      inline-size: var(--spacing-16);
-      margin-block-start: 19px;
-      background: black;
-      mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-      appearance: none;
-      border: 0;
-      padding: 0;
+      &[open] .qna-btn-2 {
+        opacity: 0;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        padding: 0px 6px 0px 0px;
+        justify-content: space-between;
+        list-style: none;
+        cursor: pointer;
+
+        .qna-1 {
+          font-weight: 600;
+          min-block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          position: relative;
+          inline-size: 16px;
+          block-size: 16px;
+          cursor: pointer;
+        }
+
+        .qna-btn-1,
+        .qna-btn-2 {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform-origin: center;
+        }
+
+        .qna-btn-1 {
+          transform: translate(-50%, -50%);
+        }
+
+        .qna-btn-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+
+      .qna-pay-2 {
+        padding: var(--spacing-24);
+
+        .qna-3 {
+          margin-block-end: var(--spacing-24);
+        }
+
+        .qna-card {
+          line-height: 160%;
+          margin-block-end: var(--spacing-24);
+        }
+
+        .qna-4 {
+          margin-block: var(--spacing-24);
+        }
+
+        .qna-5 {
+          padding: var(--spacing-4);
+          border-bottom: 1px solid var(--contents-contentTertiary, #a6a6a6);
+          font-weight: 600;
+        }
+      }
     }
   }
 
   .qna-question-2 {
+    font-size: var(--spacing-16);
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-between;
     padding: var(--spacing-16) var(--spacing-20);
+    border-bottom: 1px solid var(--border-transparent);
 
     .qna-pay {
-      display: flex;
-      flex-flow: nowrap row;
-      justify-content: space-between;
-
-      .qna-2 {
-        font-weight: 700;
-        inline-size: 90%;
-        block-size: 24px;
-        margin-inline-end: 36px;
+      &[open] .qna-btn-2 {
+        opacity: 0;
       }
 
-      .qna-button-2 {
-        block-size: var(--spacing-16);
-        inline-size: var(--spacing-16);
-        margin-block-start: 19px;
-        background: black;
-        mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-        appearance: none;
-        border: 0;
-        padding: 0;
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        padding: 0px 6px 0px 0px;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+
+        .qna-2 {
+          font-weight: 600;
+          min-block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          position: relative;
+          inline-size: 16px;
+          block-size: 16px;
+          cursor: pointer;
+        }
+
+        .qna-btn-1,
+        .qna-btn-2 {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform-origin: center;
+        }
+
+        .qna-btn-1 {
+          transform: translate(-50%, -50%);
+        }
+
+        .qna-btn-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
       }
     }
 
-    .qna-3 {
-    }
+    .qna-pay-2 {
+      padding: var(--spacing-24);
 
-    .qna-card {
-    }
+      .qna-3 {
+        margin-block-end: var(--spacing-24);
+      }
 
-    .qna-4 {
-    }
+      .qna-card {
+        line-height: 160%;
+        margin-block-end: var(--spacing-24);
+      }
 
-    .qna-5 {
+      .qna-4 {
+        margin-block: var(--spacing-24);
+      }
+
+      .qna-5 {
+        padding: var(--spacing-4);
+        border-bottom: 1px solid var(--contents-contentTertiary, #a6a6a6);
+        font-weight: 600;
+      }
     }
   }
 
   .qna-question-3 {
+    font-size: var(--spacing-16);
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: nowrap column;
     justify-content: space-between;
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-3 {
-      font-weight: 700;
-      inline-size: 352px;
-      block-size: 24px;
-      margin-inline-end: 36px;
+    .qna-pay {
+      &[open] .qna-btn-2 {
+        opacity: 0;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        padding: 0px 6px 0px 0px;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+
+        .qna-6 {
+          font-weight: 600;
+          min-block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          position: relative;
+          inline-size: 16px;
+          block-size: 16px;
+          cursor: pointer;
+        }
+
+        .qna-btn-1,
+        .qna-btn-2 {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform-origin: center;
+        }
+
+        .qna-btn-1 {
+          transform: translate(-50%, -50%);
+        }
+
+        .qna-btn-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
     }
 
-    .qna-button-3 {
-      block-size: var(--spacing-16);
-      inline-size: var(--spacing-16);
-      margin-block-start: 19px;
-      background: black;
-      mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-      appearance: none;
-      border: 0;
-      padding: 0;
+    .qna-pay-2 {
+      padding: 24px;
+
+      .qna-3 {
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-card {
+        line-height: 160%;
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-4 {
+        margin-block: var(--spacing-24);
+      }
+
+      .qna-5 {
+        padding: var(--spacing-4);
+        border-bottom: 1px solid var(--contents-contentTertiary, #a6a6a6);
+        font-weight: 600;
+      }
     }
   }
 
   .qna-question-4 {
+    font-size: var(--spacing-16);
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: nowrap column;
     justify-content: space-between;
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-4 {
-      font-weight: 700;
-      inline-size: 352px;
-      block-size: 24px;
-      margin-inline-end: 36px;
+    .qna-pay {
+      &[open] .qna-btn-2 {
+        opacity: 0;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        padding: 0px 6px 0px 0px;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+
+        .qna-7 {
+          font-weight: 600;
+          min-block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          position: relative;
+          inline-size: 16px;
+          block-size: 16px;
+          cursor: pointer;
+        }
+
+        .qna-btn-1,
+        .qna-btn-2 {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform-origin: center;
+        }
+
+        .qna-btn-1 {
+          transform: translate(-50%, -50%);
+        }
+
+        .qna-btn-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
     }
 
-    .qna-button-4 {
-      block-size: var(--spacing-16);
-      inline-size: var(--spacing-16);
-      margin-block-start: 19px;
-      background: black;
-      mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-      appearance: none;
-      border: 0;
-      padding: 0;
+    .qna-pay-2 {
+      padding: var(--spacing-24);
+
+      .qna-3 {
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-card {
+        line-height: 160%;
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-4 {
+        margin-block: var(--spacing-24);
+      }
+
+      .qna-5 {
+        padding: var(--spacing-4);
+        border-bottom: 1px solid var(--contents-contentTertiary, #a6a6a6);
+        font-weight: 600;
+      }
     }
   }
 
   .qna-question-5 {
+    font-size: var(--spacing-16);
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: nowrap column;
     justify-content: space-between;
     padding: var(--spacing-16) var(--spacing-20);
     border-bottom: 1px solid var(--border-transparent);
 
-    .qna-5 {
-      font-weight: 700;
-      inline-size: 352px;
-      block-size: 24px;
-      margin-inline-end: 36px;
+    .qna-pay {
+      &[open] .qna-btn-2 {
+        opacity: 0;
+      }
+
+      .qna-pay-1 {
+        display: flex;
+        flex-flow: nowrap row;
+        padding: 0px 6px 0px 0px;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+
+        .qna-8 {
+          font-weight: 600;
+          min-block-size: var(--spacing-24);
+          margin-inline-end: var(--spacing-36);
+        }
+
+        .qna-button-1 {
+          position: relative;
+          inline-size: 16px;
+          block-size: 16px;
+          cursor: pointer;
+        }
+
+        .qna-btn-1,
+        .qna-btn-2 {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform-origin: center;
+        }
+
+        .qna-btn-1 {
+          transform: translate(-50%, -50%);
+        }
+
+        .qna-btn-2 {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
     }
 
-    .qna-button-5 {
-      block-size: var(--spacing-16);
-      inline-size: var(--spacing-16);
-      margin-block-start: 19px;
-      background: black;
-      mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
-      appearance: none;
-      border: 0;
-      padding: 0;
+    .qna-pay-2 {
+      padding: var(--spacing-24);
+
+      .qna-3 {
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-card {
+        line-height: 160%;
+        margin-block-end: var(--spacing-24);
+      }
+
+      .qna-4 {
+        margin-block: var(--spacing-24);
+      }
+
+      .qna-5 {
+        padding: var(--spacing-4);
+        border-bottom: 1px solid var(--contents-contentTertiary, #a6a6a6);
+        font-weight: 600;
+      }
     }
   }
 }

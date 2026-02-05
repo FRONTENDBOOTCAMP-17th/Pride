@@ -1,3 +1,15 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 :root {
   /* download 전용(필요 최소) */
   --download-max-width: 1200px;
@@ -163,10 +175,18 @@ ul {
       }
     }
   }
+}
 
-  span {
+div {
+  .error-message {
+    display: none;
+    margin: 0;
     color: var(--color-negative);
     font-size: 12.003px;
+  }
+
+  input:user-invalid + .error-message {
+    display: block;
   }
 }
 
@@ -183,6 +203,19 @@ p {
   inline-size: max-content;
   block-size: var(--spacing-56);
   align-items: center;
+  gap: var(--spacing-36);
+
+  a {
+    text-decoration: none;
+  }
+
+  .sign a {
+    color: var(--color-secondary);
+  }
+
+  .login a {
+    color: var(--color-primary);
+  }
 
   .sign {
     background: var(--color-primary);
@@ -191,22 +224,28 @@ p {
     font-weight: 600;
     line-height: 150%;
     padding: var(--spacing-16) var(--spacing-24);
-    margin-inline-end: var(--spacing-36);
     block-size: 100%;
   }
 
-  .div {
-    font-size: 12.003px;
-    font-weight: 400;
-    line-height: 160%;
-  }
+  .signup-login {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: var(--spacing-16);
 
-  .login {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 150%;
-    margin-inline-start: var(--spacing-16);
-    background: transparent;
-    border: none;
+    .login-text {
+      font-size: 12.003px;
+      font-weight: 400;
+      line-height: 160%;
+    }
+
+    .login {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--content-tertiary);
+    }
   }
 }

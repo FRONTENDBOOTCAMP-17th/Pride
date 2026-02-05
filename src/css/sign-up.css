@@ -167,6 +167,22 @@ input.signup-pwd:invalid:not(:placeholder-shown) {
   outline: none;
 }
 
+.signup-pwd-icon {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  pointer-events: none;
+}
+
+input.signup-pwd:invalid:not(:placeholder-shown) + .signup-pwd-icon {
+  display: block;
+}
+
+input.signup-pwd:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
+}
+
 div .error-message {
   display: none;
   margin: 0;

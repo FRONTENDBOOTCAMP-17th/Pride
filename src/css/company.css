@@ -1,7 +1,4 @@
 :root {
-  /* download 전용(필요 최소) */
-  --download-max-width: 1200px;
-
   /* Foundation Semantic*/
   --color-primary: var(--color-black, #000);
   --color-secondary: var(--color-white, #fff);

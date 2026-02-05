@@ -6,6 +6,7 @@
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" />
     <link rel="stylesheet" href="/font/woff2/PretendardVariable.css" />
     <link rel="stylesheet" href="/src/css/sign-up.css" />
+    <link rel="stylesheet" href="/src/css/layout.css" />
     <title>Document</title>
   </head>
   <body>
@@ -26,9 +27,14 @@
             <input type="email" id="user-email" placeholder="이메일" class="signup-email" required />
           </li>
           <li>
-            <div>
+            <div style="position: relative">
               <label for="user-password" class="sr-only">비밀번호</label>
               <input type="password" id="user-password" placeholder="비밀번호" class="signup-pwd" required pattern=".{999,}" />
+
+              <svg class="signup-pwd-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="#E11900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 6L18 18" stroke="#E11900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
               <p class="error-message">비밀번호를 다시 입력해주세요.</p>
             </div>
           </li>

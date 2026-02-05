@@ -49,14 +49,14 @@
   font-family: Pretendard;
 }
 /* body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 } */
 
 header {
   display: flex;
   inline-size: 100%;
-  margin: 0 auto;
+  margin: 0;
   position: sticky;
   top: 0;
   block-size: 64px;
@@ -78,8 +78,8 @@ header {
 
   .Uber-login {
     display: flex;
-    inline-size: 80px;
-    block-size: 24px;
+    inline-size: 130px;
+    block-size: 40px;
     padding: 8px 12px;
     border-radius: 22px;
     border: 2px solid currentColor;
@@ -98,7 +98,6 @@ header {
     block-size: 30px;
     align-items: center;
     padding: 0;
-
     background: var(--color-primary);
   }
   .Uber-buttons {
@@ -106,20 +105,20 @@ header {
     align-items: center;
     flex-shrink: 0;
     align-content: flex-end;
-    padding: 0 24px;
     gap: 12px;
   }
 }
 
 .Hero {
-  inline-size: 100%;
-
-  background: url(../../public/image/Uber.svg) center / contain no-repeat;
+  background: url(/public/image/Uber.svg) center/ contain no-repeat;
+  background-size: 100%;
   background-size: auto;
+
+  min-block-size: 256px;
 
   .Hero-download {
     display: flex;
-    inline-size: 100px;
+    inline-size: 160px;
     padding: 16px 24px;
     border: 2px solid currentColor;
     background: var(--color-primary);
@@ -129,8 +128,8 @@ header {
     color: var(--color-secondary);
   }
   .Hero-content {
-    inline-size: 308px;
-    block-size: 176px;
+    inline-size: max-content;
+    block-size: max-content;
     gap: 28px;
     padding: 40px 24px;
   }
@@ -172,8 +171,9 @@ header {
     flex-direction: row;
   }
   .Hero {
-    background: url(../../public/image/UberTaxi.svg) center / contain no-repeat;
+    background: url(../../public/image/middle.svg) center / contain no-repeat;
     background-size: auto;
+    min-block-size: 359px;
   }
 }
 @media (width >= 1136px) {
@@ -188,8 +188,10 @@ header {
     align-items: flex-start;
   }
   .Hero {
-    background: url(../../public/image/UberTaxi-max.svg) center / contain no-repeat;
+    background: url(../../public/image/UberTaxi-max.svg) center/ contain no-repeat;
+
     background-size: auto;
+    min-block-size: 400px;
   }
   .Uber-nav {
     display: flex;

@@ -1,4 +1,3 @@
-/* --- 기본 유틸리티 및 변수 (기존 코드 유지) --- */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -47,7 +46,6 @@
   --spacing-64: 64px;
 }
 
-/* --- 레이아웃 (기존 코드 유지) --- */
 section {
   padding-block: var(--spacing-40);
   padding-inline: var(--spacing-24);
@@ -165,6 +163,22 @@ input.signup-pwd:invalid:not(:placeholder-shown) {
   background: var(--negative-transparent);
   border: 2px solid var(--color-negative);
   outline: none;
+}
+
+.signup-pwd-icon {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  pointer-events: none;
+}
+
+input.signup-pwd:invalid:not(:placeholder-shown) + .signup-pwd-icon {
+  display: block;
+}
+
+input.signup-pwd:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
 }
 
 div .error-message {

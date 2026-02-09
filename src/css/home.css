@@ -44,12 +44,12 @@ body {
 
 .download-title {
   margin: 0;
-  color: var(--content-primary);
+  color: var(--color-black);
 
   font-family: Pretendard;
   font-size: 1.333rem; /* 21.328px */
   font-weight: 700;
-  line-height: 140%;
+  line-height: 120%;
 }
 
 .download-list {
@@ -117,7 +117,7 @@ body {
 }
 
 .download-text {
-  color: var(--content-primary);
+  color: var(--color-black);
 
   font-family: Pretendard;
   font-size: 21.328px;

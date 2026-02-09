@@ -21,9 +21,7 @@ section,
   grid-column: 2 / span 10;
 }
 
-/* ===============================
-   📱 Mobile (≤599px)
-================================ */
+/* Mobile (≤599px)*/
 @media (max-width: 599px) {
   body {
     grid-template-columns: repeat(4, 1fr);
@@ -36,9 +34,7 @@ section,
   }
 }
 
-/* ===============================
-   📱 Tablet (600–1135px)
-================================ */
+/* Tablet (600–1135px)*/
 @media (min-width: 600px) and (max-width: 1135px) {
   body {
     grid-template-columns: repeat(8, 1fr);
@@ -51,9 +47,7 @@ section,
   }
 }
 
-/* ===============================
-   🖥 Desktop (≥1136px)
-================================ */
+/*  Desktop (≥1136px)*/
 @media (min-width: 1136px) {
   body {
     grid-template-columns: repeat(12, 1fr);
